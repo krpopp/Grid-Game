@@ -39,4 +39,9 @@ public class Move : MonoBehaviour
         transform.position = newPos;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        speed = collision.GetComponent<TileData>().tileSpeed;
+    }
+
 }
